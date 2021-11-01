@@ -1,0 +1,207 @@
+/* ------------ */
+.breadcrumbs{
+	background: transparent !important;
+	margin: 0 !important;
+}
+.breadcrumb{
+	padding: 30px 0 !important;
+	background-color: transparent !important;
+	li{
+		padding: 0 !important;
+		margin: 0 !important;
+		+li{
+			&:before{
+				content: "\203A";
+			    /* padding: 0px 4px 0 7px;*/
+			    padding: 0px 15px 0 15px;
+				@include fontF($ubuntu, 18px, 400, #7A8086);
+			}
+		}
+		a{
+			text-decoration: underline;
+			@include fontF($ubuntu, 16px, 400, #7A8086);
+		}
+	}
+	.active{
+		@include fontF($ubuntu, 16px, 400, #7A8086);
+	}
+}
+
+.title-page{
+	padding-bottom: 40px;
+	border-bottom: none;
+	@include fontF($ubuntu, 45px, 700, $color-black);
+}
+.subtitle{
+	margin-right: 15px;
+	padding-bottom: 25px;
+	@include fontF($ubuntu, 35px, 500, $color-black);
+}
+
+.page-txt{
+	min-height: 500px;
+	h1, h2, h3, h4{
+		color: $color-black;
+	}
+	p{
+		/* padding: 6px 0 !important;*/
+	}
+	strong{
+		/* color: $color-black;*/
+	}
+	ul{
+		list-style-position: inside;
+		/* margin-bottom: 15px !important;*/
+		list-style-type: disc;
+		li{
+			line-height: 1.4;
+		}
+	}
+	ol{
+		list-style-position: inside;
+	}
+}
+.page-error{
+	padding: 50px 0;
+	.msg{
+		padding: 0;
+	}
+}
+
+/* SEO-текст */
+.seo-block{
+	padding-top: 70px;
+	h2{
+		padding-bottom: 15px;
+	    font-size: 35px;
+	    font-weight: 500;
+	    color: #313944;
+	}
+	&-item{
+		width: 50%;
+	}
+}
+
+/* Страница поиска */
+.page-search{
+	h4{
+		padding-top: 30px;
+	}
+	.form-inline{
+		display: flex;
+		align-items: center;
+		margin: 30px 0;
+	}
+	.form-control{
+		background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(0,0,0,0.15);
+        margin-right: 15px;
+        color: $color-black;
+	}
+}
+
+@media (max-width: 1480px){
+	.title-page{
+		font-size: 40px;
+	}
+	.category-image img{
+		max-height: 350px;
+	}
+}
+
+@media (max-width: 1270px){
+	.page-txt{
+		min-height: auto;
+		/* padding-bottom: 100px;*/
+		p{
+			font-size: 16px;
+		}
+		table{
+			font-size: 14px;
+		}
+	}
+	.title-page{
+		font-size: 35px;
+		padding-bottom: 30px;
+	}
+	.subtitle{
+		font-size: 25px;
+	}
+	.seo-block{
+		h2{
+			font-size: 25px;
+		}
+	}
+}
+
+@media (max-width: 1000px){
+	.breadcrumb li+li:before{
+		padding: 0 7px;
+	}
+	.page-txt{
+		/* padding-bottom: 50px;*/
+	}
+	.title-page{
+		font-size: 30px;
+		padding-bottom: 30px;
+	}
+	.subtitle{
+		font-size: 25px;
+	}
+	.seo-block{
+		padding-top: 50px;
+		&-item{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+}
+@media (max-width: 767px){
+	.breadcrumbs{
+		/* display: none; */
+		margin: 0;
+		padding: 0 !important;
+	}
+	.breadcrumb{
+		li{
+			a{
+				font-size: 14px;
+			}
+		}
+		.active{
+			font-size: 14px;
+		}
+	}
+	.page-txt{
+		h1{
+			font-size: 24px;
+		}
+		iframe{
+			height: 300px;
+		}
+	}
+
+	/* Страница поиска */
+	.page-search{
+		h4{
+			padding-top: 0;
+		}
+		.form-inline{
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.form-control{
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media (max-width: 500px){
+	/* .page-txt{
+		img{
+			float: none;
+			width: auto;
+			height: auto;
+		}
+	} */
+}

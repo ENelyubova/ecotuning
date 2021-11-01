@@ -1,0 +1,5 @@
+# For all robots...
+User-agent: *
+
+# Disallow backend and default controllers
+Disallow: /

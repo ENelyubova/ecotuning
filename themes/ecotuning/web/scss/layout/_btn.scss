@@ -1,0 +1,99 @@
+/* Кнопки */ 
+.btn{
+    display: inline-block;
+    border: none;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover, &:active, &:focus{
+        outline: none !important;
+        box-shadow: none !important;
+        color: $color-white;
+        transition: all 0.3s linear;
+    }
+    /* &:focus{
+        outline: thin dotted;
+        color: $color-white;
+    } */
+}
+.btn-search{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    z-index: 5;
+}
+.btn-green{
+    position: relative;
+    padding: 17px 25px;
+    border-radius: 5px;
+    background-color: $color-green;
+    transition: 0.3s linear;
+    @include fontF($inter, 16px, 500, $color-white);
+    &:hover, &:active, &:focus{
+        color: $color-white;
+        background-color: #357d05;
+        transition: 0.3s linear;
+    }
+}
+.btn-orange{
+    position: relative;
+    padding: 17px 25px;
+    border-radius: 5px;
+    background: linear-gradient(0deg, #EBBB58, #EBBB58);
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.3s linear;
+    @include fontF($inter, 16px, 500, $color-white);
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #c39a45, #EBBB58);
+        opacity: 0;
+        z-index: -1;
+        transition: 0.3s linear;
+    }
+    &:hover, &:active, &:focus{
+        color: $color-white;
+        transition: 0.3s linear;
+        &:before{
+            opacity: 1;
+            transition: 0.3s linear;
+        }
+    }
+}
+.btn-link{
+    padding: 0 !important;
+    text-decoration: underline;
+    text-underline-position: under;
+    @include fontF($inter, 16px, 400, $color-brown);
+    &:hover, &:active, &:focus{
+        color: $color-brown;
+    }
+}
+
+@media (max-width: 1400px){
+    .btn{
+        /* font-size: 16px;*/
+    }
+}
+@media (max-width: 1270px){
+    
+}
+@media (max-width: 1000px){
+    
+}
+@media (max-width: 767px){
+    .btn{
+        padding: 15px 20px;
+    }
+}

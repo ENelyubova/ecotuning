@@ -1,0 +1,89 @@
+.service{
+	background: url(../images/bg-point.png), radial-gradient(140.76% 140.99% at 14.59% -50.74%, #93C42B 0%, #46A408 100%), #877D7D;
+	&__text{
+		width: 48%;
+		color: $color-white;
+	}
+	&-info{
+		&__item{
+			margin-bottom: 35px;
+		}
+		&__title{
+			display: flex;
+			align-items: center;
+			margin-bottom: 18px;
+			font-family: $elektra;
+			font-size: 26px;
+			img{
+				margin-right: 20px;
+			}
+		}
+	}
+
+	&__image{
+		position: relative;
+		width: 50%;
+		.image-wrap{
+			position: relative;
+			width: 1029px;
+			height: 550px;
+		}
+	}
+}
+
+@media (max-width: 1580px){
+	.service__image{
+		.image-wrap{
+			width: 850px;
+			height: 500px;
+		}
+	}
+}
+@media (max-width: 1400px){
+	.service-info{
+		&__title{
+			font-size: 23px;
+			img{
+				height: 50px;
+			}
+		}
+	}
+	.service__image{
+		.image-wrap{
+			width: 770px;
+			height: 450px;
+		}
+	}
+}
+@media (max-width: 1270px){
+	
+}
+@media (max-width: 1000px){
+	.service{
+		&__text{
+			width: 100%;
+		}
+		&-info{
+			&__title{
+				font-size: 18px;
+			}
+		}
+		&__image{
+			width: 100%;
+			margin-top: 20px;
+			.image-wrap{
+				width: auto;
+				height: auto;
+				img{
+					position: relative;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 767px){
+	
+}
+@media (max-width: 450px){
+	
+}

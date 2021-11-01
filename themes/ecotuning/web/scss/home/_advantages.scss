@@ -1,0 +1,113 @@
+.advantages{
+	&-block{
+		width: calc(100% + 20px);
+		margin: 0 -10px;
+	}
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		width: calc(100% / 2 - 20px);
+		margin: 0 10px;
+		margin-bottom: 20px;
+		padding: 30px;
+		background: #F6F8FA;
+		border-radius: 10px;
+		&-style{
+			min-height: 260px;
+			background: url(../images/advantages/Трактор.png), linear-gradient(0deg, #46A408, #46A408), linear-gradient(143.9deg, rgba(115, 183, 12, 0.9) 0%, rgba(71, 164, 8, 0.9) 96.48%), #F6F4F0;
+			background-repeat: no-repeat;
+			background-position: 100% 100%;
+			color: $color-white;
+			.advantages__name{
+				color: $color-white;
+			}
+			.btn{
+				margin-top: 25px;
+			}
+		}
+	}
+	&__text{
+		width: 65%;
+	}
+	&__name{
+		margin-bottom: 15px;
+		font-family: $elektra;
+		font-size: 26px;
+		line-height: 1.2;
+		color: $color-black;
+	}
+	&__desc{
+		width: 90%;
+		line-height: 1.2;
+	}
+	&__img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30%;
+		img{
+			max-height: 175px;
+		}
+	}
+}
+
+@media (max-width: 1400px){
+	.advantages__name{
+		font-size: 23px;
+	}
+}
+@media (max-width: 1270px){
+	.advantages__item-style{
+		background-position: 160% 100%;
+	}
+}
+@media (max-width: 1000px){
+	.advantages{
+		&__item{
+			flex-direction: column;
+		}
+		&__text{
+			width: 100%;
+		}
+		&__name{
+			font-size: 20px;
+		}
+
+		&__img{
+			width: 100%;
+			margin-top: 20px;
+			img{
+				max-height: 100px;
+			}
+		}
+	}
+}
+@media (max-width: 767px){
+	.advantages{
+		&__item{
+			&-style{
+				background-position: 100% 100%;
+				background-size: 100%;
+			}
+		}
+		&__name{
+			font-size: 18px;
+		}
+	}
+}
+@media (max-width: 640px){
+	.advantages{
+		&-block{
+			width: 100%;
+			margin: 0;
+		}
+		&__item{
+			width: 100%;
+		    margin: 0;
+		    margin-bottom: 20px;
+		    &-style{
+		    	background: linear-gradient(0deg, #46A408, #46A408), linear-gradient(143.9deg, rgba(115, 183, 12, 0.9) 0%, rgba(71, 164, 8, 0.9) 96.48%), #F6F4F0;
+		    }
+		}
+	}
+}

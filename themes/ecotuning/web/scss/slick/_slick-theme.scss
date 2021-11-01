@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+/* Slick icon entity codes outputs the following*/
+/* "\2022" outputs ascii character "•"*/
+
+$slick-font-path: "../stick/fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "../stick/" !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-dot-character: "\2022" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+@function slick-font-url($url) {
+    @if function-exists(font-url) {
+        @return font-url($url);
+    }
+    @else {
+        @return url($slick-font-path + $url);
+    }
+}
+
+/* Slider */
+.slick-list {
+    .slick-loading & {
+        background: #fff url("../images/ajax-loader.gif") center center no-repeat;
+    }
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    text-align: center;
+    border: none; 
+    background: #EBBB58;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    z-index: 5;
+    cursor: pointer;
+    box-shadow: 0px 9px 13px -10px rgba(0, 0, 0, 0.1);
+    @include transition(all .3s ease);
+    &:before{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include fontF($icomoon, 30px, normal, $color-black);
+    }
+    &:hover, &:active, &:focus{
+        background: #fff;
+        border: 1px solid #D7D7D7;
+        outline: none;
+        @include transition(all .3s ease);
+        /* &:before{
+            color: $color-green;
+        } */
+    }
+    &:focus{
+        outline: none !important;
+    }
+    &.slick-disabled {
+        /* opacity: $slick-opacity-not-active;*/
+        opacity: 0.75;
+        background: #EBBB58;
+        outline: none;
+        &:hover, &:active{
+            &:before{
+                
+            }
+        }
+    }
+}
+.lin-gradient-start{
+    stop-color: #E4175A;
+}
+.lin-gradient-end{
+    stop-color: #FF558D;
+}
+.slick-next{
+    &:before{
+        content: url(../images/icon/right.svg);
+        left: 53%;
+    }
+    &:hover, &:active, &:focus{
+        &:before{
+            content: url(../images/icon/right-green.svg);
+        }
+    }
+    &.slick-disabled{
+        &:hover, &:active, &:focus{
+            &:before{
+                content: url(../images/icon/right.svg);
+            }
+        }
+    }
+}
+.slick-prev{
+    margin-right: 10px;
+    &:before{
+        content: url(../images/icon/left.svg);
+        left: 47%;
+    }
+    &:hover, &:active, &:focus{
+        &:before{
+            content: url(../images/icon/left-green.svg);
+        }
+    }
+    &.slick-disabled{
+        &:hover, &:active, &:focus{
+            &:before{
+                content: url(../images/icon/left.svg);
+            }
+        }
+    }
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+    /* margin-bottom: 30px;*/
+}
+
+.slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 20%;*/
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 8;
+    li{
+        margin-right: 10px;
+        height: 10px;
+        width: 10px;
+        button{
+            width: 10px;
+            height: 10px;
+            border: none;
+            padding: 0;
+            border-radius: 50%;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            background: $color-white;
+            border: 1px solid #E9EAF3;
+            opacity: 0.5;
+        }
+    }
+    .slick-active{
+        display: inline-block;
+        button{
+            background: $color-white;
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 1430px){
+    .slick-prev{
+        width: 45px;
+        height: 45px;
+    }
+    .slick-next{
+        width: 45px;
+        height: 45px;
+    }
+}
+@media (max-width: 1270px){
+    .slick-prev,
+    .slick-next{
+        &:before{
+        }
+    }
+}
+@media (max-width: 767px){
+    
+}

@@ -1,0 +1,110 @@
+.blog{
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+    }
+    &-item{
+        width: calc(100% / 3 - 20px);
+        margin: 0 10px;
+        margin-bottom: 50px;
+        &:first-child{
+            width: 65%;
+            .blog-item__title{
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+        &:not(:first-child){
+            .blog-item__visit{
+                display: none;
+            }
+        }
+        &__img{
+            position: relative;
+            margin-bottom: 10px;
+            height: 350px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        &__visit{
+            margin-left: 20px;
+            span{
+                margin-left: 5px;
+            }
+        }
+        &__title{
+            padding: 7px 0;
+            a{
+                font-size: 18px;
+                font-weight: 500;
+                color: $color-black;
+            }
+        }
+    }
+}
+
+@media (max-width: 1430px){
+    .blog-item:first-child{
+        width: 64.9%;
+    }
+}
+@media (max-width: 1270px){
+    .blog-item{
+        margin-bottom: 30px;
+        &:first-child{
+            width: 64.6%;
+        }
+        &__img{
+            height: 280px;
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .blog-item{
+        width: calc(100% / 2 - 20px);
+        &:first-child{
+            width: calc(100% / 2 - 20px);
+            .blog-item__title{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .blog{
+        &-list{
+            width: 100%;
+            margin: 0;
+        }
+        &-item{
+            width: 100%;
+            margin: 0;
+            margin-bottom: 30px;
+            &:first-child{
+                width: 100%;
+                .blog-item__title{
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &__img{
+                height: 270px;
+            }
+            &__title{
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

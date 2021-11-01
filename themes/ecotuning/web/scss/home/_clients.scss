@@ -1,0 +1,27 @@
+.clients{
+	.slick-track{
+		display: flex;
+		align-items: center;
+	}
+	&-block{
+		width: calc(100% + 20px);
+		margin: 0 -10px;
+		padding-top: 50px;
+	}
+	&__img{
+		margin: 0 10px;
+	}
+}
+
+@media (max-width: 1270px){
+	
+}
+@media (max-width: 1000px){
+	
+}
+@media (max-width: 767px){
+	
+}
+@media (max-width: 450px){
+	
+}

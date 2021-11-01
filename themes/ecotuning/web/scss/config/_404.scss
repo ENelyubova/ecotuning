@@ -1,0 +1,121 @@
+.page-error{
+  .title{
+    font-weight: 700;
+    color: $color-black;
+  }
+  a{
+    text-decoration: underline;
+    color: $color-green;
+  }
+  &-search{
+    margin: 30px 0;
+  }
+}
+.title-error{
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 75px;
+  font-weight: 700;
+  color: $color-black;
+}
+ /* #notfound{*/
+ /*  position: relative;*/
+ /*     height: 400px;*/
+ /* }*/
+ /* .notfound{*/
+ /*  position: absolute;*/
+ /*     left: 50%;*/
+ /*     top: 50%;*/
+ /*     transform: translate(-50%, -50%);*/
+ /*     width: 100%;*/
+ /*     max-width: 520px;*/
+ /*     line-height: 1.4;*/
+ /*     text-align: center;*/
+ /*     &-404{*/
+ /*       position: relative;*/
+ /*       height: 240px;*/
+ /*     }*/
+ /*     h3{*/
+ /*        font-family: $ubuntu;*/
+ /*      font-family: 'Cabin', sans-serif;*/
+ /*      position: relative;*/
+ /*      font-size: 16px;*/
+ /*      font-weight: 700;*/
+ /*      text-transform: uppercase;*/
+ /*      color: #262626;*/
+ /*      margin: 0px;*/
+ /*      letter-spacing: 3px;*/
+ /*      padding-left: 6px;*/
+ /*     }*/
+ /*     h1{*/
+ /*        font-family: $ubuntu;*/
+ /*      font-family: 'Montserrat', sans-serif;*/
+ /*      position: absolute;*/
+ /*      left: 50%;*/
+ /*      top: 50%;*/
+ /*      transform: translate(-50%, -50%);*/
+ /*      width: -webkit-max-content;*/
+ /*      width: -moz-max-content;*/
+ /*      width: max-content;*/
+ /*      font-size: 252px;*/
+ /*      font-weight: 900;*/
+ /*      margin: 0px;*/
+ /*      color: #262626;*/
+ /*      text-transform: uppercase;*/
+ /*      letter-spacing: -40px;*/
+ /*      margin-left: -20px;*/
+ /*      span{*/
+ /*       text-shadow: -8px 0px 0px #fff;*/
+ /*      }*/
+ /*     }*/
+ /*     h2{*/
+ /*        font-family: $ubuntu;*/
+ /*         font-family: 'Cabin', sans-serif;*/
+ /*      font-size: 20px;*/
+ /*      font-weight: 700;*/
+ /*      text-transform: uppercase;*/
+ /*      color: #262626;*/
+ /*      margin-top: 0px;*/
+ /*      letter-spacing: 3px;*/
+ /*      margin-bottom: 25px;*/
+ /*     }*/
+ /*     &-btn{*/
+ /*       display: inline-block;*/
+ /*       position: relative;*/
+ /*       *//* border-radius: 5px;*//**/
+ /*       border-radius: 0;*/
+ /*       margin-top: 15px;*/
+ /*       padding: 15px 30px;*/
+ /*       background-color: $color-blue;*/
+ /*       @include fontF($ubuntu, 18px, 400, $color-white);*/
+ /*     }*/
+ /* }*/
+
+ @media (max-width: 767px){
+     .notfound{
+          &-404{
+              height: 200px;
+          }
+          h1{
+               font-size: 200px;
+          }
+     }
+ }
+ @media (max-width: 480px){
+     .page-error{
+          padding: 30px 0;
+     }
+     .notfound{
+          &-404{
+              height: 162px;
+          }
+          h1{
+              font-size: 162px;
+              height: 150px;
+              line-height: 162px;
+          }
+          h2{
+               font-size: 16px;
+          }
+     }
+ }

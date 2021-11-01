@@ -1,0 +1,120 @@
+.contacts-block{
+    margin-bottom: 90px;
+    &__img{
+        width: 50%;
+        padding-right: 120px;
+    }
+    &__text{
+        flex: 1;
+        width: 50%;
+    }
+    &__item{
+        padding: 15px 0;
+        &:not(:first-child){
+            border-top: 1px solid #D9DDE8;
+        }
+        strong{
+            font-size: 24px;
+            font-weight: 500;
+            color: $color-black;
+        }
+        a{
+            font-size: 24px;
+            color: $color-black;
+        }
+    }
+    &__phone{
+        a{
+            font-weight: 500;
+            color: $color-green;
+        }
+    }
+    &__address{
+        span{
+            font-size: 24px;
+            color: $color-black;
+        }
+    }
+    &__email{
+        a{
+            text-decoration: underline;
+        }
+    }
+    &__social{
+        .social-panel{
+            margin-top: 10px;
+        }
+    }
+}
+.image-wrap{
+    position: relative;
+    height: 480px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.contact-icon{
+    margin-right: 10px;
+}
+.page-map{
+    margin-top: 50px;
+    iframe{
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 1270px){
+    .contacts-block{
+        &__item{
+            a, strong{
+                font-size: 21px;
+            }
+        }
+        &__address{
+            span{
+                font-size: 21px;
+            }
+        }
+    }
+    .image-wrap{
+        height: auto;
+        width: auto;
+        img{
+            position: relative;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .contacts-block{
+        margin-bottom: 50px;
+        &__img{
+            width: 100%;
+            img{
+                width: 120px;
+                height: 120px;
+            }
+        }
+        &__text{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 767px){
+    .contacts-block{
+        &__item{
+            a, strong{
+                font-size: 18px;
+            }
+        }
+        &__address{
+            span{
+                font-size: 18px;
+            }
+        }
+    }
+    .contact-icon{
+        width: 30px;
+        height: 30px;
+    }
+}

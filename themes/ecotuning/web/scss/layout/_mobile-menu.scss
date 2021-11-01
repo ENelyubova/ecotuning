@@ -1,0 +1,163 @@
+/* Боковое меню */
+html{
+    /* overflow-x: hidden;*/
+    /* overflow-x: auto;*/
+}
+body{
+    
+}
+.mobile-panel{
+    display: none;
+    margin-left: 15px;
+    .m-menu-button{
+        position: relative;
+        /* top: 10px; left: 15px;*/
+        background: transparent;
+        width: 25px;
+        height: 25px;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 10;
+        @include transform-mobile-link;
+        .line{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: $color-white;
+            margin: 5px 0;
+            opacity: 1;
+        }
+    }
+    .mobile-menu{
+        overflow-y: scroll;
+        position: fixed;
+        top: 0; left: 0;
+        bottom: 0;
+        width: 101%;
+        height: 100vh;
+        overflow: hidden;
+        padding-left: 0;
+        transition-delay: .1s;
+        background-color: $color-white;
+        z-index: 254;
+        @include transform-mobile-menu;
+        @include transition-line;
+        .dropbtn{
+            display: none;
+        }
+        .m-menu-buttons{
+            position: fixed;
+            top: 0px; right: -10px;
+            z-index: 15;
+            background: transparent;
+            width: 50px;
+            height: 40px;
+            overflow: hidden;
+            cursor: pointer;
+            @include transform-mobile-link;
+            .line{
+                display: block;
+                width: 50%;
+                height: 2px;
+                background: $color-black;
+                margin: 8px auto;
+                opacity: 1;
+                &:nth-child(1){
+                    @include rotate-first-line;
+                }
+                &:nth-child(3){
+                    @include rotate-last-line;
+                }
+                &:nth-child(2){
+                    @include rotate-two-line;
+                }
+            }
+        }
+        .close{
+            left: 65%;
+            opacity: 1;
+            @include transform-mobile-link;
+            .line{
+                &:nth-child(1){
+                    @include rotate-first-line;
+                }
+                &:nth-child(3){
+                    @include rotate-last-line;
+                }
+                &:nth-child(2){
+                    @include rotate-two-line;
+                }
+            }
+        }
+    }
+    &.active-menu{
+        .mobile-menu{
+            transform: translateX(-1%);
+            overflow-y: scroll;
+        }
+        .m-menu-button{
+            opacity: 0;
+        }
+        .close{
+            opacity: 1;
+        }
+    }
+    .mobile-content{
+        padding: 30px 15px 15px 25px;
+        ul{
+            text-align: left;
+            li{
+                margin: 15px 0px;
+                a{
+                    display: block;
+                    /* padding: 15px 0;*/
+                    text-decoration: none;
+                    @include fontF($inter, 16px, 500, $color-black);
+                    &:hover{
+                        color: $color-green;
+                    }
+                }
+                ul{
+                    display: none;
+                }
+            }
+        }
+        &-item{
+            padding: 5px 0;
+            color: $color-black;
+            font-size: 16px;
+        }
+        &__email{
+            margin-top: 20px;
+            a{
+                font-weight: 700;
+                color: $color-black;
+            }
+        }
+        &__phone{
+            a{
+                font-weight: 700;
+                color: $color-green;
+            }
+        }
+        &__btn{
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 1000px){
+    .mobile-panel{
+        display: block;
+    }
+}
+@media (max-width: 767px){
+    .mobile{
+        &-hidden{
+            display: none;
+        }
+        &-visible{
+            /* display: block !important;*/
+        }
+    }
+}

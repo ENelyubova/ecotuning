@@ -1,0 +1,158 @@
+$color-basic: #464646;
+$color-form: #333333;
+$color-white: #fff;
+$color-black: #313944;
+
+/* ------------- */
+$color-darkblue: #00408C;
+$color-blue: #0044FF;
+$color-red: #990000;
+$color-orange: #FF6B00;
+$color-gray: #E7EAF0;
+
+
+$color-lightblue: #F6F8FA;
+$color-green: #419708;
+$color-text: #666666;
+$color-lightgray: #929292;
+$color-brown: #876F54;
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: $icomoon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html{
+  width: 100%;
+  /* height: 100%;
+  overflow-x: hidden; */
+}
+body, p, h1, h2, h3, h4, div, ul, li, div{
+  margin: 0px; padding: 0px; border: 0px;
+}
+
+body{
+  background: #fff;
+  max-width: 1980px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  height: 100%;
+  min-height: 100%;
+  word-break: break-word;
+  @include fontF($ubuntu, 18px, 400, $color-text);
+}
+
+ul{
+  list-style: none;
+  margin:0px !important;
+  padding:0px !important;
+}
+
+.row{
+  /*margin: 0px !important;*/
+}
+
+.list-view{
+  padding: 0px !important;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+p{
+  /* line-height: 1.2 !important;*/
+}
+
+a{
+  outline: none !important;
+  text-decoration: none;
+  text-underline-position: under;
+  @include delay;
+  &:hover{
+    @include delay;
+    text-decoration: none !important;
+  }
+  &:focus, &:active{
+    @include delay;
+    text-decoration: none !important;
+  }
+}
+
+img{
+  max-width: 100%;
+  width: auto;
+}
+
+.container-site{
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  line-height: 1.4 !important;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+.wrap1{
+  flex: 1 0 auto;
+}
+
+.wrap2{
+  flex: 0 0 auto;
+}
+
+.content-site{
+  width: 1200px; 
+  /* margin-left: auto;*/
+  margin: 0 auto;
+  height: 100%;
+  @include fontF($ubuntu, 16px, 400, $color-text);
+}
+
+.page-in{
+  img{
+    max-width: 100%;
+  }
+  ul, ol{
+    /* list-style: disc !important;*/
+    margin-left: 15px;
+    li{
+      padding: 5px;
+      margin: 0px 15px;
+    }
+  }
+}
+
+.breadcrumbs{
+  padding: 10px 0px !important;
+  margin: 20px auto;
+  background: #fff;
+  .breadcrumb{
+    background: none;
+  }
+  a{
+    &:hover{
+      color: $color-text;
+    }
+  }
+}

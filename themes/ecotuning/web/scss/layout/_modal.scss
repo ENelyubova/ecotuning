@@ -1,0 +1,204 @@
+.help-block{
+    margin-bottom: 0;
+}
+.compensate-for-scrollbar{
+    margin-right: 0 !important;
+    padding-right: 17px;
+}
+.control-label{
+    display: none;
+}
+.modal-open{
+    @media (min-width: 1000px){
+        overflow: hidden;
+        padding-right: 17px;
+    }
+}
+.modal{
+    &-wrap{
+        height: 100%;
+    }
+    &-dialog{
+        margin: 10px auto;
+        width: 300px;
+        /* width: 815px;*/
+        &-msg{
+            margin: 80px auto;
+            width: 355px;
+            .modal-header{
+                padding: 40px 20px;
+            }
+        }
+    }
+    &-msg{
+        overflow-y: auto; 
+    }
+    &-content{
+        border-radius: 0;
+        width: 335px;
+        box-shadow: none;
+        border: none;
+    }
+    &-img{
+        position: relative;
+        /* width: 460px;*/
+        /* background: #fff url(../images/news/5.jpg) no-repeat center;*/
+        background-size: cover;
+    }
+    &-header{
+        /* padding: 30px 20px 20px;*/
+        padding: 45px 40px 0;
+        border-bottom: none;
+        background: #fff url(../images/modal-bg.jpg) no-repeat center;
+        background-size: cover;
+    }
+    &-heading{
+        h3{
+            text-transform: uppercase;
+            @include fontF($inter, 24px, 700, $color-black);
+            /* span{
+                color: $color-black;
+            } */
+        }
+        /* p{
+            padding: 5px 0;
+            @include fontF($inter, 18px, 400, $color-black);
+        } */
+    }
+    &-my-heading{
+        h3{
+            @include fontF($inter, 20px, 700, $color-black);
+        }
+    }
+    &-close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        z-index: 10;
+        &-mobile{
+            display: none;
+        }
+        /* .fa-times{
+            font-size: 20px;
+        } */
+    }
+    &-body{
+        padding: 8px 40px 30px;
+        @include fontF($inter, 16px, 400, $color-text);
+        p{
+            padding-bottom: 25px;
+        }
+        label{
+            @include fontF($inter, 16px, 400, $color-black);
+        }
+        input, textarea{
+            height: auto;
+            padding: 10px;
+            border: 1px solid #757575;
+            border-radius: 0;
+            &::-webkit-input-placeholder { 
+                font-style: normal;
+            }
+            &::-moz-placeholder { 
+                font-style: normal;
+            }
+            &:-ms-input-placeholder { 
+                font-style: normal;
+            }
+            &:-moz-placeholder { 
+                font-style: normal;
+            }
+            &:hover, &:focus, &:active{
+                border: 1px solid #161616;
+                box-shadow: none !important;
+            }
+        }
+        .error{
+            @include fontF($inter, 16px, 400, $color-red);
+        }
+        .form-bot{
+            .form-captcha{
+                position: relative;
+                left: -18px;
+                top: 0px;
+                display: block;
+                margin: 0;
+                transform: scale(0.85);
+            }
+            .form-button{
+                margin-top: 15px;
+            }
+            .btn-call{
+                /* width: 100%;*/
+                padding: 14px 40px;
+                border-radius: 100px;
+            }
+        }
+    }
+}
+.help-block{
+    &.error{
+        color: $color-red;
+    }
+}
+.form-control{
+    font-size: 16px;
+}
+.terms_of_use{
+    color: #959595;
+    font-size: 12px;
+    line-height: 1.2;
+    padding: 15px 0px 0px;
+    a{
+        color: #959595;
+        text-decoration: underline;
+    }
+}
+
+
+@media (max-width: 850px){
+    .modal{
+        &-dialog{
+            width: 355px;
+        }
+        &-img{
+            display: none;
+        }
+        &-close-mobile{
+            display: block;
+        }
+    }
+}
+@media (max-width: 400px){
+    .modal{
+        &-dialog{
+            width: 300px;
+            &-msg{
+                width: 300px;
+            }
+        }
+        &-content{
+            width: 300px;
+        }
+        &-header{
+            padding: 30px 20px 20px;
+        }
+        &-heading{
+            h3{
+                font-size: 21px;
+            }
+        }
+        &-body{
+            padding: 8px 20px 20px;
+        }
+    }
+    .form-captcha{
+        width: 288px;
+        height: 72px;
+        .g-recaptcha{
+            transform: scale(0.95);
+            transform-origin: 0 0 !important;
+        }
+    }
+}

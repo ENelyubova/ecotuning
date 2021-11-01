@@ -1,0 +1,48 @@
+/* CSS Document */
+@media (max-width: 1560px){
+	.content-site{
+	    font-size: 16px;
+	}
+	.heading{
+		font-size: 40px;
+	}
+}
+@media (max-width: 1430px){
+	.content-site{
+	    width: 1170px;
+	}
+}
+@media (max-width: 1270px){
+	.content-site{
+	    width: 960px;
+	}
+	.pt{
+		padding-top: 70px;
+	}
+	.pb{
+		padding-bottom: 60px;
+	}
+	.heading{
+		font-size: 35px;
+	}
+}
+@media (max-width: 1000px){
+	.content-site{
+	    width: 90%;
+	}
+	.heading{
+		font-size: 30px;
+	}
+	.heading-block {
+	    margin-bottom: 25px;
+	}
+}
+@media (max-width: 767px){
+	.content-site{
+		width: 90%;
+	    font-size: 14px;
+	}
+	.heading{
+		font-size: 24px;
+	}
+}
